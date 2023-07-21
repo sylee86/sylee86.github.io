@@ -1,15 +1,12 @@
-import './App.css';
+import Header from './components/Header.js';
+import Container from './components/Container.js';
+
 
 function App() {
   return (
-    <div className="App">
+    <div className="wrap">
       <Header />
       <Container />
-      <header className="App-header">
-        <p>
-          test123123123
-        </p>
-      </header>
     </div>
   );
 }

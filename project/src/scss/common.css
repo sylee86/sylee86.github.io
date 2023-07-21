@@ -1,0 +1,211 @@
+@charset "UTF-8";
+/*================================================== Reset ==================================================*/
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  vertical-align: baseline;
+  box-sizing: border-box;
+}
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, main, menu, nav, section, summary {
+  display: block;
+}
+
+audio, canvas, progress, video {
+  display: inline-block;
+  vertical-align: baseline;
+}
+
+html,
+pre {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
+  font-weight: 300;
+}
+
+/* body {-webkit-text-size-adjust:none; text-size-adjust:none;} 아이폰 가로모드시 글씨 커지는 문제 */
+body {
+  color: #666;
+  line-height: 1.5;
+  word-break: break-all;
+  word-wrap: break-word;
+  -webkit-text-size-adjust: none;
+  -moz-text-size-adjust: none;
+       text-size-adjust: none;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  color: #222;
+  font-size: inherit;
+  font-weight: 500;
+}
+
+address {
+  font-style: normal;
+}
+
+blockquote, q {
+  quotes: none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: "";
+  content: none;
+}
+
+pre {
+  overflow: auto;
+}
+
+sub {
+  vertical-align: sub;
+  line-height: 0;
+}
+
+sup {
+  vertical-align: super;
+  line-height: 0;
+}
+
+b, em, strong {
+  font-weight: 500;
+}
+
+i, em {
+  font-style: normal;
+}
+
+img, fieldset {
+  vertical-align: middle;
+}
+
+ol, ul, li {
+  list-style: none;
+}
+
+table {
+  width: 100%;
+  border-collapse: separate;
+  border-spacing: 0;
+  table-layout: fixed;
+  word-break: normal;
+}
+
+th, td {
+  text-align: center;
+  vertical-align: middle;
+}
+
+th {
+  font-weight: 500;
+}
+
+caption, legend {
+  position: static;
+  width: 1px;
+  height: 1px;
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
+fieldset, legend {
+  background-color: transparent;
+}
+
+hr {
+  height: 0;
+  border: 0;
+  background-color: transparent;
+}
+
+svg:not(:root) {
+  overflow: hidden;
+}
+
+a {
+  background-color: transparent;
+  color: #fff;
+  text-decoration: none;
+}
+
+a[href^=tel]:not([class^=btn_]) {
+  color: inherit;
+}
+
+button {
+  display: inline-block;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  background-color: transparent;
+  font-size: 16px;
+  text-align: center;
+  overflow: visible;
+  box-sizing: border-box;
+}
+
+button,
+input[type=button], input[type=reset], input[type=submit] {
+  vertical-align: middle;
+  cursor: pointer;
+  -webkit-appearance: button;
+}
+
+button[disabled], button[disabled]:hover, input[disabled] {
+  cursor: default;
+}
+
+button, input, select, option, optgroup, textarea {
+  border-radius: 0;
+  color: #222;
+  font-family: "OneShinhan", "원신한", "Malgun Gothic", "Dotum", "돋움", "gulim", "굴림", Helvetica, sans-serif;
+  font-size: 16px;
+  font-weight: 300;
+  word-spacing: 0.1rem;
+}
+
+button, select {
+  text-transform: none;
+}
+
+/* 레이아웃 */
+.wrap {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  background-color: #282c34;
+}
+
+.container {
+  width: 100%;
+}
+
+.header {
+  width: 100%;
+  height: 50px;
+  line-height: 50px;
+  text-align: center;
+}
+.header h1 {
+  color: #fff;
+  font-size: 30px;
+}
+
+/*================================================== components ==================================================*//*# sourceMappingURL=common.css.map */
