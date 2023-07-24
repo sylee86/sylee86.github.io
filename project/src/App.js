@@ -1,14 +1,24 @@
 import Header from './components/Header.js';
-import Container from './components/Container.js';
+import Main from './pages/Main.js';
+import BoardList from './pages/BoardList.js';
+import { Routes, Route, BrowserRouter } from "react-router-dom";
 
 
-function App() {
+const App = () => {
   return (
+
     <div className="wrap">
-      <Header />
-      <Container />
+      <BrowserRouter>
+        <Routes>
+          {/* main */}
+          <Route path="/" element={<Main />} />
+          {/* board */}
+          <Route path="/boardlist" element={<BoardList />} />
+        </Routes>
+      </BrowserRouter>
     </div>
   );
+
 }
 
 export default App;

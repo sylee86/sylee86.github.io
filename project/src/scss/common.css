@@ -172,8 +172,7 @@ button[disabled], button[disabled]:hover, input[disabled] {
 
 button, input, select, option, optgroup, textarea {
   border-radius: 0;
-  color: #222;
-  font-family: "OneShinhan", "원신한", "Malgun Gothic", "Dotum", "돋움", "gulim", "굴림", Helvetica, sans-serif;
+  color: #fff;
   font-size: 16px;
   font-weight: 300;
   word-spacing: 0.1rem;
@@ -183,8 +182,21 @@ button, select {
   text-transform: none;
 }
 
+.blind {
+  display: inline-block;
+  position: absolute !important;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  overflow: hidden;
+  clip: rect(1px, 1px, 1px, 1px);
+  -webkit-clip-path: inset(50%);
+          clip-path: inset(50%);
+}
+
 /* 레이아웃 */
-.wrap {
+#root {
   min-height: 100vh;
   display: flex;
   flex-direction: column;
@@ -193,12 +205,14 @@ button, select {
   background-color: #282c34;
 }
 
-.container {
+.wrap {
   width: 100%;
 }
 
 .header {
+  position: relative;
   width: 100%;
+  padding: 0 50px;
   height: 50px;
   line-height: 50px;
   text-align: center;
@@ -207,5 +221,59 @@ button, select {
   color: #fff;
   font-size: 30px;
 }
+.header .home {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 50px;
+  height: 50px;
+}
+.header .home .gg-home {
+  background: linear-gradient(to left, currentColor 5px, transparent 0) no-repeat 0 bottom/4px 2px, linear-gradient(to left, currentColor 5px, transparent 0) no-repeat right bottom/4px 2px;
+  box-sizing: border-box;
+  position: relative;
+  left: 50%;
+  margin-left: -9px;
+  display: block;
+  transform: scale(var(--ggs, 1));
+  width: 18px;
+  height: 14px;
+  border: 2px solid;
+  border-top: 0;
+  border-bottom: 0;
+  border-top-right-radius: 3px;
+  border-top-left-radius: 3px;
+  border-bottom-right-radius: 0;
+  border-bottom-left-radius: 0;
+  margin-bottom: -2px;
+}
+.header .home .gg-home::after, .header .home .gg-home::before {
+  content: "";
+  display: block;
+  box-sizing: border-box;
+  position: absolute;
+}
+.header .home .gg-home::before {
+  border-top: 2px solid;
+  border-left: 2px solid;
+  border-top-left-radius: 4px;
+  transform: rotate(45deg);
+  top: -5px;
+  border-radius: 3px;
+  width: 14px;
+  height: 14px;
+  left: 0;
+}
+.header .home .gg-home::after {
+  width: 8px;
+  height: 10px;
+  border: 2px solid;
+  border-radius: 100px;
+  border-bottom-left-radius: 0;
+  border-bottom-right-radius: 0;
+  border-bottom: 0;
+  left: 3px;
+  bottom: 0;
+}
 
-/*================================================== components ==================================================*//*# sourceMappingURL=common.css.map */
+/*================================================== components ==================================================*/
