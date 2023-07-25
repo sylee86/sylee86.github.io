@@ -1,6 +1,7 @@
-import Header from './components/Header.js';
+
 import Main from './pages/Main.js';
 import BoardList from './pages/BoardList.js';
+import BoardDetail from './pages/BoardDetail.js';
 import { Routes, Route, BrowserRouter } from "react-router-dom";
 
 
@@ -14,6 +15,10 @@ const App = () => {
           <Route path="/" element={<Main />} />
           {/* board */}
           <Route path="/boardlist" element={<BoardList />} />
+          {/* board */}
+          <Route path="/boardDetail" element={<BoardDetail />} />
+          {/* Todolist */}
+          <Route path="/Todolist" element={<Todolist />} />
         </Routes>
       </BrowserRouter>
     </div>

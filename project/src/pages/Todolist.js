@@ -9,7 +9,7 @@ const BoardList = () => {
           <i className="gg-home"></i>
           <span className="blind">home</span>
         </Link>
-        <h1>게시판 목록</h1>
+        <h1>To do List</h1>
       </header>
       <div className="boardList">
         <ul>
