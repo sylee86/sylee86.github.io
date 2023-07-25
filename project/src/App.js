@@ -1,6 +1,7 @@
 
 import Main from './pages/Main.js';
 import BoardList from './pages/BoardList.js';
+import Todolist from './pages/Todolist.js';
 import BoardDetail from './pages/BoardDetail.js';
 import { Routes, Route, BrowserRouter } from "react-router-dom";
 

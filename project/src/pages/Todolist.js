@@ -1,7 +1,7 @@
 import boardInfo from "../db/boardInfo.json"  // eslint-disable-line no-unused-vars
 import { Link } from "react-router-dom"; // eslint-disable-line no-unused-vars
 
-const BoardList = () => {
+const Todolist = () => {
   return (
     <div>
       <header className="header">
@@ -16,11 +16,6 @@ const BoardList = () => {
           {
             boardInfo.list.map((item) => (
               <li key={item.id}>
-                <Link to="./../BoardDetail">
-                  <span className="title">{item.title}</span>
-                  <span className="date">{item.date}</span>
-                  <span className="author">{item.author}</span>
-                </Link>
               </li>
             ))
           }
@@ -31,4 +26,4 @@ const BoardList = () => {
 }
 
 
-export default BoardList;
+export default Todolist;

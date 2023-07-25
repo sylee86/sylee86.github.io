@@ -30,7 +30,8 @@ pre {font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxyg
   'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
   sans-serif; font-weight:300;}
 /* body {-webkit-text-size-adjust:none; text-size-adjust:none;} 아이폰 가로모드시 글씨 커지는 문제 */
-body {color:#666; line-height:1.5; word-break:break-all; word-wrap:break-word; -webkit-text-size-adjust:none; text-size-adjust:none;}
+body {color:#666; line-height:1.5; word-break:break-all; word-wrap:break-word; -webkit-text-size-adjust:none; text-size-adjust:none; 
+  background-color: #282c34;}
 h1,h2,h3,h4,h5,h6 {color:#222; font-size:inherit; font-weight:500;}
 address {font-style:normal;}
 blockquote, q {quotes:none;}
@@ -70,7 +71,6 @@ button, select {text-transform:none;}
   flex-direction: column;
   align-items: center;
   justify-content: flex-start;
-  background-color: #282c34;
 }
 
 .wrap {

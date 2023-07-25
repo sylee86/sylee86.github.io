@@ -6,11 +6,8 @@ const Main = () => {
   let goBoard = () => {
     navigate("./BoardList");
   }
-  let goMain = () => {
-    navigate("./");
-  }
   let goTodolist = () => {
-    navigate("./goTodolist");
+    navigate("./todolist");
   }
   return (
     <div>
@@ -22,8 +19,8 @@ const Main = () => {
         <h1>React</h1>
       </header>
       <div className="main">
-        <p>react 연습중입니다.</p>
-        <button type="button" onClick={() => goBoard()}>게시판 바로가기</button>
+        <p>react 연습중입니다.</p><br />
+        <button type="button" onClick={() => goBoard()}>게시판 바로가기</button><br />
         <button type="button" onClick={() => goTodolist()}>todoList 바로가기</button>
       </div>
     </div>
