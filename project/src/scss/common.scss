@@ -28,7 +28,7 @@ audio, canvas, progress, video {display:inline-block; vertical-align:baseline;}
 html,
 pre {font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
   'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-  sans-serif; font-weight:300;}
+  sans-serif; font-weight:300; word-wrap: break-word;}
 /* body {-webkit-text-size-adjust:none; text-size-adjust:none;} 아이폰 가로모드시 글씨 커지는 문제 */
 body {color:#666; line-height:1.5; word-break:break-all; word-wrap:break-word; -webkit-text-size-adjust:none; text-size-adjust:none; 
   background-color: #282c34;}
@@ -157,12 +157,57 @@ button, select {text-transform:none;}
   }
 }
 /*================================================== components ==================================================*/
+.main {
+
+  .btns {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 0 10px;
+    justify-content: space-between;
+    button {
+      width: calc(50% - 5px);
+      height: 50px;
+      line-height: 48px;
+      border: 1px solid #666;
+      border-radius: 4px;
+    }
+  }
+}
 .boardList {
   li {
     padding: 10px;
     border-bottom: 1px solid #666;
     .title {
       display:block;
+    }
+    span:not(.title) {
+      font-size: 13px;
+
+    }
+    .author {
+      display: inline-block;
+      margin-right: 10px;
+    }
+  }
+}
+
+.boardDetail {
+  padding: 20px 10px;
+  dl {
+    display: flex;
+    flex-wrap: nowrap;
+    & + dl {
+      margin-top: 10px;
+    }
+    dt { 
+      flex-grow: 0; 
+      min-width: 100px;
+      width: 100px;
+    }
+    dd {
+      flex-grow: 1;
+      width: 100%;
+      color:#fff;
     }
   }
 }

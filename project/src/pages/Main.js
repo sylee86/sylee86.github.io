@@ -20,8 +20,10 @@ const Main = () => {
       </header>
       <div className="main">
         <p>react 연습중입니다.</p><br />
-        <button type="button" onClick={() => goBoard()}>게시판 바로가기</button><br />
-        <button type="button" onClick={() => goTodolist()}>todoList 바로가기</button>
+        <div className="btns">
+          <button type="button" onClick={() => goBoard()}>게시판 바로가기</button><br />
+          <button type="button" onClick={() => goTodolist()}>todoList 바로가기</button>
+        </div>
       </div>
     </div>
   );

@@ -17,7 +17,7 @@ const App = () => {
           {/* board */}
           <Route path="/boardlist" element={<BoardList />} />
           {/* board */}
-          <Route path="/boardDetail" element={<BoardDetail />} />
+          <Route path="/boardDetail/:id" element={<BoardDetail />} />
           {/* Todolist */}
           <Route path="/Todolist" element={<Todolist />} />
         </Routes>

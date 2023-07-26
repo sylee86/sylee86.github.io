@@ -1,11 +1,10 @@
-import boardInfo from "../db/boardInfo.json"  // eslint-disable-line no-unused-vars
-import { Link } from "react-router-dom"; // eslint-disable-line no-unused-vars
-
+import boardInfo from "../db/boardInfo.json"  
+import { Link } from "react-router-dom"; 
 const BoardList = () => {
   return (
     <div>
       <header className="header">
-        <Link className="home" to="./../">
+        <Link className="home" to="/">
           <i className="gg-home"></i>
           <span className="blind">home</span>
         </Link>
@@ -16,10 +15,10 @@ const BoardList = () => {
           {
             boardInfo.list.map((item) => (
               <li key={item.id}>
-                <Link to="./../BoardDetail">
+                <Link to={`/BoardDetail/${item.id}`}>
                   <span className="title">{item.title}</span>
-                  <span className="date">{item.date}</span>
                   <span className="author">{item.author}</span>
+                  <span className="date">{item.date}</span>
                 </Link>
               </li>
             ))
@@ -29,6 +28,5 @@ const BoardList = () => {
     </div>
   );
 }
-
 
 export default BoardList;
