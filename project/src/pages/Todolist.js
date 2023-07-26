@@ -5,7 +5,7 @@ const Todolist = () => {
   return (
     <div>
       <header className="header">
-        <Link className="home" to="./../">
+        <Link className="home" to="/">
           <i className="gg-home"></i>
           <span className="blind">home</span>
         </Link>

@@ -1,5 +1,6 @@
 import boardInfo from "../db/boardInfo.json"  
 import { Link } from "react-router-dom"; 
+
 const BoardList = () => {
   return (
     <div>
