@@ -284,20 +284,33 @@ button, select {
 }
 
 /*================================================== components ==================================================*/
-.main .btns {
+.btns {
   display: flex;
   flex-wrap: wrap;
   padding: 0 10px;
+  margin-top: 15px;
   justify-content: space-between;
 }
-.main .btns button {
-  width: calc(50% - 5px);
-  height: 50px;
-  line-height: 48px;
+.btns.r {
+  justify-content: flex-end;
+}
+.btns [class^=btn] {
+  display: flex;
+  align-items: center;
+  justify-content: center;
   border: 1px solid #666;
   border-radius: 4px;
 }
+.btns .btnS {
+  padding: 10px 10px;
+  height: 30px;
+}
+.btns .btnL {
+  width: calc(50% - 5px);
+  height: 50px;
+}
 
+/* 게시판 리스트 */
 .boardList li {
   padding: 10px;
   border-bottom: 1px solid #666;

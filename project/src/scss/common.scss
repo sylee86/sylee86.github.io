@@ -157,22 +157,34 @@ button, select {text-transform:none;}
   }
 }
 /*================================================== components ==================================================*/
-.main {
+.btns {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 0 10px;
+  margin-top: 15px;
+  justify-content: space-between;
+  &.r {
+    justify-content: flex-end;
+  }
 
-  .btns {
+  [class^="btn"] {
     display: flex;
-    flex-wrap: wrap;
-    padding: 0 10px;
-    justify-content: space-between;
-    button {
-      width: calc(50% - 5px);
-      height: 50px;
-      line-height: 48px;
-      border: 1px solid #666;
-      border-radius: 4px;
-    }
+    align-items: center;
+    justify-content: center;
+    border: 1px solid #666;
+    border-radius: 4px;
+  }
+  .btnS {
+    padding: 10px 10px;
+    height: 30px;
+  }
+  .btnL {
+    width: calc(50% - 5px);
+    height: 50px;
   }
 }
+
+/* 게시판 리스트 */
 .boardList {
   li {
     padding: 10px;
