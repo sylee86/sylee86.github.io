@@ -21,17 +21,23 @@ function BoardWrite(){
 
   const submitVal = (e) => {
     e.preventDefault();
-    setValue({ //초기화
-      title : '',
-      author : '',
-      content : '',
-    })
+
+    //console.log(form.title)
+    onSubmit(form);
+    
 
   }
+  //const BASE_URL = 'http://localhost:3000';
   const onSubmit = () => {
-     axios.post('/list', {
-      
-     })
+    axios.get("/BoardList", {
+      title: "",
+      author: "",
+      content: "",
+  }).then(res => {
+    console.log(res)
+  }).catch(error => {
+    console.log(error.response);
+  })
 }
 
   return (
