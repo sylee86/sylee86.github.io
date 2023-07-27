@@ -21,10 +21,6 @@ article, aside, details, figcaption, figure,
 footer, header, hgroup, main, menu, nav, section, summary {display:block;}
 audio, canvas, progress, video {display:inline-block; vertical-align:baseline;}
 
-
-
-
-
 html,
 pre {font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
   'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
@@ -60,8 +56,11 @@ button,
 input[type=button], input[type=reset], input[type=submit] {vertical-align:middle; cursor:pointer; appearance:button; -webkit-appearance:button;}
 button[disabled], button[disabled]:hover, input[disabled] {cursor:default;}
 
-button, input, select, option, optgroup, textarea {border-radius:0; color:#fff; font-size:16px; font-weight:300; word-spacing:0.1rem;}
+button, input, select, option, optgroup, textarea {border-radius:0; box-sizing: border-box; color:#fff; font-size:16px; font-weight:300; word-spacing:0.1rem; background-color: #282c34;}
 button, select {text-transform:none;}
+textarea {resize: none; width: 100%; height: 200px;}
+input[type="text"], textarea {width:100%; border: 1px solid #666;}
+
 .blind {display:inline-block; position:absolute !important; width:1px; height:1px; margin:-1px; border:0; overflow:hidden; clip:rect(1px, 1px, 1px, 1px); clip-path:inset(50%);}
 
 /* 레이아웃 */
@@ -85,11 +84,12 @@ button, select {text-transform:none;}
   text-align: center;
   margin-bottom: 10px;
   border-bottom: 1px solid #666;
+  overflow: hidden;
   h1{
     color: #fff;
     font-size: 20px;
   }
-  .home {
+  .btn {
     position: absolute;
     top: 0;
     left: 0;
@@ -97,6 +97,40 @@ button, select {text-transform:none;}
     width: 50px;
     height: 50px;
 
+    [class^="gg-"] {
+      box-sizing: border-box;
+      position: absolute;
+      display: block;
+      left: 50%;
+      top: 50%;
+    }
+
+    .gg-prev {
+      margin-top: 11px;
+      margin-left: -9px;
+      &::after,
+      &::before {
+          content: "";
+          display: block;
+          box-sizing: border-box;
+          position: absolute;
+          left: 3px
+      }
+      &::after {
+          width: 8px;
+          height: 8px;
+          border-bottom: 2px solid;
+          border-left: 2px solid;
+          transform: rotate(45deg);
+          bottom: 7px
+      }
+      &::before {
+          width: 16px;
+          height: 2px;
+          bottom: 10px;
+          background: currentColor
+      }
+    }
     .gg-home {
       background:
           linear-gradient(to left,
@@ -105,13 +139,8 @@ button, select {text-transform:none;}
           linear-gradient(to left,
               currentColor 5px,transparent 0)
               no-repeat right bottom/4px 2px;
-      box-sizing: border-box;
-      position: absolute;
-      left: 50%;
-      top: 50%;
       margin-left: -9px;
-      margin-top: -5px;
-      display: block;
+      margin-top: -7px;
       width: 18px;
       height: 14px;
       border: 2px solid;
@@ -121,7 +150,6 @@ button, select {text-transform:none;}
       border-top-left-radius: 3px;
       border-bottom-right-radius: 0;
       border-bottom-left-radius: 0;
-      margin-bottom: -2px;
 
 
       &::after,
@@ -194,7 +222,6 @@ button, select {text-transform:none;}
     }
     span:not(.title) {
       font-size: 13px;
-
     }
     .author {
       display: inline-block;
@@ -221,5 +248,8 @@ button, select {text-transform:none;}
       width: 100%;
       color:#fff;
     }
+  }
+  .btns {
+    padding: 0; 
   }
 }

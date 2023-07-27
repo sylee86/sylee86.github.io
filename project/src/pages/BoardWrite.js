@@ -1,15 +1,11 @@
-import boardInfo from "db/boardInfo.json" 
 import PagePrev from "components/PagePrev" 
-import { useParams } from "react-router-dom"; 
 import { useState } from "react";
+import axios from "axios";
 
-function BoardEdit(){
-  let para = useParams(); // url 파라미터
-  let matchItem = boardInfo.list.find(function(item){
-    if(item.id == para.id) return true;
-  }) 
+function BoardWrite(){
   const [form, setValue] = useState({
     title : '',
+    author : '',
     content : '',
   }); 
 
@@ -20,37 +16,46 @@ function BoardEdit(){
       [name]: value
     })
   }
+
+  // const setValue = inputs;
+
   const submitVal = (e) => {
     e.preventDefault();
-    //onSaveData(form)
     setValue({ //초기화
       title : '',
+      author : '',
       content : '',
     })
+
   }
+  const onSubmit = () => {
+     axios.post('/list', {
+      
+     })
+}
 
   return (
     <div>
       <header className="header">
         <PagePrev />
-        <h1>게시판 수정</h1>
+        <h1>게시판 작성</h1>
       </header>
       <form className="boardDetail" onSubmit={submitVal}>
         <dl>
           <dt>제목</dt>
-          <dd><input type="text" name="title" defaultValue={matchItem.title} onChange={changeVal} /></dd>
+          <dd><input type="text" name="title" onChange={changeVal} /></dd>
         </dl>
         <dl>
           <dt>작성자</dt>
-          <dd>{matchItem.author}</dd>
+          <dd><input type="text" name="author" onChange={changeVal} /></dd>
         </dl>
         <dl>
           <dt>작성일</dt>
-          <dd>{matchItem.date}</dd>
+          <dd></dd>
         </dl>
         <dl>
           <dt>내용</dt>
-          <dd><textarea name="content" defaultValue={matchItem.content} onChange={changeVal}></textarea></dd>
+          <dd><textarea name="content" onChange={changeVal}></textarea></dd>
         </dl>
 
         <div className="btns r">
@@ -62,4 +67,4 @@ function BoardEdit(){
 }
 
 
-export default BoardEdit;
+export default BoardWrite;

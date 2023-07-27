@@ -1,17 +1,17 @@
-import boardInfo from "../db/boardInfo.json"  
+import boardInfo from "db/boardInfo.json"  
 import { Link } from "react-router-dom"; 
 
 const BoardList = () => {
   return (
     <div>
       <header className="header">
-        <Link className="home" to="/">
+        <Link className="btn" to="/">
           <i className="gg-home"></i>
           <span className="blind">home</span>
         </Link>
         <h1>게시판 목록</h1>
       </header>
-      <div className="boardList">
+      <form className="boardList">
         <ul>
           {
             boardInfo.list.map((item) => (
@@ -25,7 +25,11 @@ const BoardList = () => {
             ))
           }
         </ul>
-      </div>
+
+        <div className="btns r">
+          <Link className="btnS" to="/BoardWrite">작성</Link>
+        </div>
+      </form>
     </div>
   );
 }

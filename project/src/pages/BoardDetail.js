@@ -1,23 +1,20 @@
-import boardInfo from "../db/boardInfo.json"  // eslint-disable-line no-unused-vars
-import { useNavigate, useParams } from "react-router-dom"; // eslint-disable-line no-unused-vars
+import boardInfo from "db/boardInfo.json";
+import PagePrev from "components/PagePrev"; 
+import { useNavigate, useParams } from "react-router-dom";
 
 function BoardDetail(){
   let navigate = useNavigate();
-  let goMain = () => {
-    navigate("/");
-  }
   let goEdit = () => {
-    navigate("/BoardEdit");
+    navigate(`/BoardEdit/${para.id}`);
   }
   let para = useParams();
   let matchItem = boardInfo.list.find(function(item){
-    if(item.id == para.id) 
-    return true;
+    if(item.id == para.id) return true;
   })
   return (
     <div>
       <header className="header">
-        <button className="home" type="button" onClick={() => goMain()}><i className="gg-home"></i><span className="blind">home</span></button>
+        <PagePrev />
         <h1>게시판 상세</h1>
       </header>
       <div className="boardDetail">

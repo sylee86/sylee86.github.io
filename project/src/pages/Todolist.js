@@ -1,11 +1,11 @@
-import boardInfo from "../db/boardInfo.json"  // eslint-disable-line no-unused-vars
-import { Link } from "react-router-dom"; // eslint-disable-line no-unused-vars
+import boardInfo from "db/boardInfo.json" 
+import { Link } from "react-router-dom";
 
 const Todolist = () => {
   return (
     <div>
       <header className="header">
-        <Link className="home" to="/">
+        <Link className="btn" to="/">
           <i className="gg-home"></i>
           <span className="blind">home</span>
         </Link>

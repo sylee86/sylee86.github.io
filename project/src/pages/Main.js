@@ -1,18 +1,18 @@
-import { useNavigate } from "react-router-dom"; // eslint-disable-line no-unused-vars
-import { Link } from "react-router-dom"; // eslint-disable-line no-unused-vars
+import { useNavigate } from "react-router-dom";
+import { Link } from "react-router-dom"; 
 
 const Main = () => {
   let navigate = useNavigate();
   let goBoard = () => {
-    navigate("./BoardList");
+    navigate("/BoardList");
   }
   let goTodolist = () => {
-    navigate("./todolist");
+    navigate("/todolist");
   }
   return (
     <div>
       <header className="header">
-        <Link className="home" to="/">
+        <Link className="btn" to="/">
           <i className="gg-home"></i>
           <span className="blind">home</span>
         </Link>
