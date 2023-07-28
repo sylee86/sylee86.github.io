@@ -1,4 +1,4 @@
-import PagePrev from "components/PagePrev" 
+import PagePrev from "./../components/PagePrev" 
 import { useState } from "react";
 import axios from "axios";
 

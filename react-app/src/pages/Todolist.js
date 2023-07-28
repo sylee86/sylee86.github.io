@@ -1,4 +1,4 @@
-import boardInfo from "db/boardInfo.json" 
+import boardInfo from "./../db/boardInfo.json" 
 import { Link } from "react-router-dom";
 
 const Todolist = () => {

@@ -1,5 +1,5 @@
-import boardInfo from "db/boardInfo.json";
-import PagePrev from "components/PagePrev"; 
+import boardInfo from "./../db/boardInfo.json";
+import PagePrev from "./../components/PagePrev"; 
 import { useNavigate, useParams } from "react-router-dom";
 
 function BoardDetail(){

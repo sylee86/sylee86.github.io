@@ -1,11 +1,23 @@
-const express = require('express')
-const app = express()
-const port = 3001 // <- 3000에서 다른 숫자로 변경
+const express = require('express');
+const path = require('path');
+const app = express();
+const http = require('http').createServer(app);
 
-app.get('/', (req, res) => {
-  res.send('Hello World!')
-})
+// CORS 이슈 해결
+app.use(express.json());
+const cors = require('cors');
+app.use(cors());
 
-app.listen(port, () => {
-  console.log(`Example app listening at http://localhost:${port}`)
-})
+app.use(express.static(path.join(__dirname, '/build')));
+
+app.get('/', (res, req) => {
+  req.sendFile(path.join(__dirname, '/build/index.html'));
+});
+
+app.get('*', (res, req) => {
+  req.sendFile(path.join(__dirname, '/build/index.html'));
+});
+
+http.listen(3001, () => {
+  console.log("Listening on 8080");
+});

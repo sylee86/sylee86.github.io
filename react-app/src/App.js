@@ -1,16 +1,16 @@
 
-import Main from 'pages/Main.js';
-import Todolist from 'pages/Todolist.js';
-import BoardList from 'pages/BoardList.js';
-import BoardDetail from 'pages/BoardDetail.js';
-import BoardEdit from 'pages/BoardEdit.js';
-import BoardWrite from 'pages/BoardWrite.js';
+
+import Main from './pages/Main.js';
+import Todolist from './pages/Todolist.js';
+import BoardList from './pages/BoardList.js';
+import BoardDetail from './pages/BoardDetail.js';
+import BoardEdit from './pages/BoardEdit.js';
+import BoardWrite from './pages/BoardWrite.js';
 import { Routes, Route, BrowserRouter } from "react-router-dom"; // eslint-disable-line no-unused-vars
 
 
 const App = () => {
   return (
-
     <div className="wrap">
       <BrowserRouter>
         <Routes>
