@@ -27,9 +27,9 @@ function BoardWrite(){
     
 
   }
-  //const BASE_URL = 'http://localhost:3000';
+  const BASE_URL = 'http://localhost:3001';
   const onSubmit = () => {
-    axios.get("/BoardList", {
+    axios.get(`${BASE_URL}/BoardList`, {
       title: "",
       author: "",
       content: "",
