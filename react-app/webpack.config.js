@@ -6,7 +6,9 @@ module.exports = {
   entry: path.join(__dirname, 'src', 'index.js'),
   mode: 'development',
   output: {
-    path: path.resolve(__dirname, 'dist'),
+    publicPath: '/src/',
+    path: path.join(__dirname, 'src'), // '현재 경로/dist' 디렉토리의 output path 설정
+    filename: 'app.js', // 출력할 파일 이름 설정
   },
   module: {
     rules: [
@@ -45,4 +47,5 @@ module.exports = {
     hot: true,
     host: 'localhost',
     port: 3001,
-  },
+  }
+}

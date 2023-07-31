@@ -23,22 +23,20 @@ function BoardWrite(){
     e.preventDefault();
 
     //console.log(form.title)
-    onSubmit(form);
+    //onSubmit(form);
     
 
   }
-  const BASE_URL = 'http://localhost:3001';
-  const onSubmit = () => {
-    axios.get(`${BASE_URL}/BoardList`, {
-      title: "",
-      author: "",
-      content: "",
-  }).then(res => {
-    console.log(res)
-  }).catch(error => {
-    console.log(error.response);
-  })
-}
+  const BASE_URL = 'http://localhost:3000/BoardList';
+//   const onSubmit = () => {
+//     axios.get(BASE_URL, {params})
+//   .then(res => {
+//     console.log(form.title)
+//   })
+//   .catch(error => {
+//     console.log(error.response);
+//   })
+// }
 
   return (
     <div>

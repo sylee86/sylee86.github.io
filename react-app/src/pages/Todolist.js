@@ -1,7 +1,11 @@
-import boardInfo from "./../db/boardInfo.json" 
 import { Link } from "react-router-dom";
+import { useState } from "react";
 
 const Todolist = () => {
+  const [form, setValue] = useState({
+    todocont : '',
+  }); 
+  console.log(form);
   return (
     <div>
       <header className="header">
@@ -11,16 +15,16 @@ const Todolist = () => {
         </Link>
         <h1>To do List</h1>
       </header>
-      <div className="boardList">
-        <ul>
-          {
-            boardInfo.list.map((item) => (
-              <li key={item.id}>
-              </li>
-            ))
-          }
-        </ul>
-      </div>
+      <form>
+        <div className="todoInput">
+          <input type="text" name="todocont" placeholder="해야할 일을 입력해주세요." />
+          <button className="btnS">전송</button>
+        </div>
+        <div className="todoList">
+          <ul>
+          </ul>
+        </div>
+      </form>
     </div>
   );
 }
