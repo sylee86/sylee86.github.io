@@ -21,8 +21,8 @@ const Main = () => {
       <div className="main">
         <p>react 연습중입니다.</p><br />
         <div className="btns">
-          <button type="button" className="btnL" onClick={() => goBoard()}>게시판 바로가기</button><br />
-          <button type="button" className="btnL" onClick={() => goTodolist()}>todoList 바로가기</button>
+          <button type="button" className="btn L" onClick={() => goBoard()}>게시판 바로가기</button><br />
+          <button type="button" className="btn L" onClick={() => goTodolist()}>todoList 바로가기</button>
         </div>
       </div>
     </div>

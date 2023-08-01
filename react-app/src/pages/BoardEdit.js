@@ -54,7 +54,7 @@ function BoardEdit(){
         </dl>
 
         <div className="btns r">
-          <button type="submit" className="btnS">확인</button>
+          <button type="submit" className="btn S">확인</button>
         </div>
       </form>
     </div>

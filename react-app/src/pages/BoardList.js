@@ -27,7 +27,7 @@ const BoardList = () => {
         </ul>
 
         <div className="btns r">
-          <Link className="btnS" to="/BoardWrite">작성</Link>
+          <Link className="btn S" to="/BoardWrite">작성</Link>
         </div>
       </form>
     </div>

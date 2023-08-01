@@ -2,6 +2,7 @@
 
 import Main from './pages/Main.js';
 import Todolist from './pages/Todolist.js';
+import Todolist2 from './pages/Todolist2.js';
 import BoardList from './pages/BoardList.js';
 import BoardDetail from './pages/BoardDetail.js';
 import BoardEdit from './pages/BoardEdit.js';
@@ -26,6 +27,8 @@ const App = () => {
           <Route path="/BoardWrite" element={<BoardWrite />} />
           {/* Todolist */}
           <Route path="/Todolist" element={<Todolist />} />
+          {/* Todolist2 */}
+          <Route path="/Todolist2" element={<Todolist2 />} />
         </Routes>
       </BrowserRouter>
     </div>

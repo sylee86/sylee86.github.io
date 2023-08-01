@@ -37,7 +37,7 @@ function BoardDetail(){
       </div>
 
       <div className="btns r">
-        <button className="btnS" onClick={() => goEdit()}>수정</button>
+        <button className="btn S" onClick={() => goEdit()}>수정</button>
       </div>
     </div>
   );

@@ -194,24 +194,23 @@ input[type="text"], textarea {width:100%; border: 1px solid #666;}
   &.r {
     justify-content: flex-end;
   }
+}
 
-  [class^="btn"] {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    border: 1px solid #666;
-    border-radius: 4px;
-  }
-  .btnS {
+.btn:not(.btns) {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid #666;
+  border-radius: 4px;
+  &.S {
     padding: 10px 10px;
     height: 30px;
   }
-  .btnL {
+  &.L {
     width: calc(50% - 5px);
     height: 50px;
   }
 }
-
 /* 게시판 리스트 */
 .boardList {
   li {
@@ -256,5 +255,36 @@ input[type="text"], textarea {width:100%; border: 1px solid #666;}
 
 /* 투두 리스트 */
 .todoInput {
+  padding: 10px;
   display: flex; 
+  input {
+    height: 30px;
+  }
+  .btn.S {
+    margin-left: 10px;
+    min-width: 50px;
+    flex-grow: 0;
+    height: 30px;
+  }
+}
+.todoList {
+  padding: 5px 10px;
+  color:#fff;
+  .todoItem {
+    position: relative;
+    padding-left: 6px;
+    & + .todoItem {
+      margin-top: 4px;
+    }
+    &:before {
+      content: "";
+      position: absolute;
+      top: 11px;
+      left: 0;
+      width: 2px;
+      height: 2px;
+      border-radius: 50%;
+      background-color: #fff;
+    }
+  }
 }
