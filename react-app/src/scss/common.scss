@@ -256,19 +256,51 @@ input[type="text"], textarea {width:100%; border: 1px solid #666;}
 /* 투두 리스트 */
 .todoInput {
   padding: 10px;
-  display: flex; 
+  display: flex;
+  justify-content: space-between;
   input {
     height: 30px;
   }
-  .btn.S {
+  .tit {
+    font-weight: bold;
+    font-size: 18px;
+    color: #fff;
+  }
+  .btn {
+    position: relative;
     margin-left: 10px;
     min-width: 50px;
     flex-grow: 0;
     height: 30px;
+    &.plus {
+      min-width: 30px;
+    }
+  }
+  .gg-plus,
+  .gg-plus::after {
+      display: block;
+      box-sizing: border-box;
+      background: currentColor;
+      border-radius: 10px
+  }
+  .gg-plus {
+      margin-top: -2px;
+      position: relative;
+      transform: scale(var(--ggs,1));
+      width: 16px;
+      height: 2px
+  }
+  .gg-plus::after {
+      content: "";
+      position: absolute;
+      width: 2px;
+      height: 16px;
+      top: -7px;
+      left: 7px
   }
 }
 .todoList {
-  padding: 5px 10px;
+  padding: 5px 10px; 
   color:#fff;
   .todoItem {
     position: relative;
@@ -285,6 +317,18 @@ input[type="text"], textarea {width:100%; border: 1px solid #666;}
       height: 2px;
       border-radius: 50%;
       background-color: #fff;
+    }
+  }
+
+  &.insert {
+    .todoItem {
+      display: flex;
+      justify-content: space-between;
+      .btn {
+        margin-left: 4px;
+        min-width: 50px;
+        flex-grow: 0;
+      }
     }
   }
 }

@@ -1,18 +1,21 @@
 import { Link } from "react-router-dom";
 import { useState } from "react";
 
-const Todolist = () => {
+const Todolist2 = () => {
   const [item, setItem] = useState([]); 
   const [todo, setTodo] = useState(""); 
-  const inpValue = (e) => {
-    setTodo(e.target.value);
-  }
-  const insertValue = (e) => {
+  const [save, setSave] = useState(false); 
+  // const inpValue = (e) => {
+  //   setTodo(e.target.value);
+  // }
+  const insertItem = (e) => {
     e.preventDefault();
     setItem((prevState) => {
-      //console.log('등록하기 전의 names값', prevState);
-      return [todo, ...prevState];
+      return [item, ...prevState];
     })
+  }
+  const itemSave = (e) => {
+    e.preventDefault();
   }
   
   
@@ -28,13 +31,17 @@ const Todolist = () => {
       </header>
       <form>
         <div className="todoInput">
-          <input type="text" name="todoitem" onChange={inpValue} placeholder="해야할 일을 입력해주세요." />
-          <button onClick={insertValue} className="btn S">전송</button>
+          <div className="tit">해야할 일</div>
+          <button onClick={insertItem} className="btn plus">
+            <i class="gg-plus"></i>
+            <span className="blind">추가</span>
+          </button>
         </div>
-        <div className="todoList">
+        <div className="todoList insert">
           {item.map((val, idx) => {
-            return <div className="todoItem" key={idx}>
-              {val}
+            return <div className={`todoItem ${save ? 'save' : ''}`} key={idx}>
+              <input type="text" />
+              <button className="btn S" onClick={itemSave}>저장</button>
             </div>
           })}
         </div>

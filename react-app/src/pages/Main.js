@@ -9,6 +9,9 @@ const Main = () => {
   let goTodolist = () => {
     navigate("/todolist");
   }
+  let goTodolist2 = () => {
+    navigate("/todolist2");
+  }
   return (
     <div>
       <header className="header">
@@ -21,8 +24,9 @@ const Main = () => {
       <div className="main">
         <p>react 연습중입니다.</p><br />
         <div className="btns">
-          <button type="button" className="btn L" onClick={() => goBoard()}>게시판 바로가기</button><br />
+          <button type="button" className="btn L" onClick={() => goBoard()}>게시판 바로가기</button>
           <button type="button" className="btn L" onClick={() => goTodolist()}>todoList 바로가기</button>
+          <button type="button" className="btn L" onClick={() => goTodolist2()}>todoList2 바로가기</button>
         </div>
       </div>
     </div>

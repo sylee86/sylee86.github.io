@@ -392,15 +392,47 @@ input[type=text], textarea {
 .todoInput {
   padding: 10px;
   display: flex;
+  justify-content: space-between;
 }
 .todoInput input {
   height: 30px;
 }
-.todoInput .btn.S {
+.todoInput .tit {
+  font-weight: bold;
+  font-size: 18px;
+  color: #fff;
+}
+.todoInput .btn {
+  position: relative;
   margin-left: 10px;
   min-width: 50px;
   flex-grow: 0;
   height: 30px;
+}
+.todoInput .btn.plus {
+  min-width: 30px;
+}
+.todoInput .gg-plus,
+.todoInput .gg-plus::after {
+  display: block;
+  box-sizing: border-box;
+  background: currentColor;
+  border-radius: 10px;
+}
+.todoInput .gg-plus {
+  margin-top: -2px;
+  position: relative;
+  transform: scale(var(--ggs, 1));
+  width: 16px;
+  height: 2px;
+}
+.todoInput .gg-plus::after {
+  content: "";
+  position: absolute;
+  width: 2px;
+  height: 16px;
+  top: -7px;
+  left: 7px;
 }
 
 .todoList {
@@ -423,4 +455,13 @@ input[type=text], textarea {
   height: 2px;
   border-radius: 50%;
   background-color: #fff;
+}
+.todoList.insert .todoItem {
+  display: flex;
+  justify-content: space-between;
+}
+.todoList.insert .todoItem .btn {
+  margin-left: 4px;
+  min-width: 50px;
+  flex-grow: 0;
 }
