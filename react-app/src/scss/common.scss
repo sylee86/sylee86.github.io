@@ -329,6 +329,12 @@ input[type="text"], textarea {width:100%; border: 1px solid #666;}
         min-width: 50px;
         flex-grow: 0;
       }
+      &.active {
+        input {
+          border: none; 
+        }
+
+      }
     }
   }
 }

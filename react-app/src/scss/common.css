@@ -465,3 +465,6 @@ input[type=text], textarea {
   min-width: 50px;
   flex-grow: 0;
 }
+.todoList.insert .todoItem.active input {
+  border: none;
+}

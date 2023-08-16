@@ -2,12 +2,9 @@ import { Link } from "react-router-dom";
 import { useState } from "react";
 
 const Todolist2 = () => {
-  const [item, setItem] = useState([]); 
-  const [todo, setTodo] = useState(""); 
-  const [save, setSave] = useState(false); 
-  // const inpValue = (e) => {
-  //   setTodo(e.target.value);
-  // }
+  const [item, setItem] = useState([]);
+  const [isActive, setIsActive] = useState(false);
+  
   const insertItem = (e) => {
     e.preventDefault();
     setItem((prevState) => {
@@ -16,9 +13,8 @@ const Todolist2 = () => {
   }
   const itemSave = (e) => {
     e.preventDefault();
+    setIsActive(!isActive);
   }
-  
-  
 
   return (
     <div>
@@ -39,8 +35,8 @@ const Todolist2 = () => {
         </div>
         <div className="todoList insert">
           {item.map((val, idx) => {
-            return <div className={`todoItem ${save ? 'save' : ''}`} key={idx}>
-              <input type="text" />
+            return <div className={`todoItem ${isActive ? "active" : ""}`} key={idx}>
+              <input type="text"  />
               <button className="btn S" onClick={itemSave}>저장</button>
             </div>
           })}
