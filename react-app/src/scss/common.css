@@ -244,6 +244,7 @@ input[type=text], textarea {
   display: block;
   width: 50px;
   height: 50px;
+  border: none !important;
 }
 .header .btn [class^=gg-] {
   box-sizing: border-box;

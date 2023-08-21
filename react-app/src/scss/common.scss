@@ -96,6 +96,7 @@ input[type="text"], textarea {width:100%; border: 1px solid #666;}
     display: block;
     width: 50px;
     height: 50px;
+    border: none !important;
 
     [class^="gg-"] {
       box-sizing: border-box;

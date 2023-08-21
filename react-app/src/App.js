@@ -1,13 +1,14 @@
 
-
 import Main from './pages/Main.js';
-import Todolist from './pages/Todolist.js';
-import Todolist2 from './pages/Todolist2.js';
+import TodoTemplate from './pages/TodoTemplate.js';
 import BoardList from './pages/BoardList.js';
 import BoardDetail from './pages/BoardDetail.js';
 import BoardEdit from './pages/BoardEdit.js';
 import BoardWrite from './pages/BoardWrite.js';
-import { Routes, Route, BrowserRouter } from "react-router-dom"; // eslint-disable-line no-unused-vars
+import Hello from './pages/hello.js';
+import Wrapper from './pages/Wrapper.js';
+import Counter from './pages/Counter.js';
+import { Routes, Route, BrowserRouter } from "react-router-dom";
 
 
 const App = () => {
@@ -25,12 +26,17 @@ const App = () => {
           <Route path="/BoardEdit/:id" element={<BoardEdit />} />
           {/* board Write */}
           <Route path="/BoardWrite" element={<BoardWrite />} />
-          {/* Todolist */}
-          <Route path="/Todolist" element={<Todolist />} />
-          {/* Todolist2 */}
-          <Route path="/Todolist2" element={<Todolist2 />} />
+          {/* TodoTemplate */}
+          <Route path="/TodoTemplate" element={<TodoTemplate />} />
+          {/* Counter */}
+          <Route path="/Counter" element={<Counter />} />
         </Routes>
       </BrowserRouter>
+
+      <Wrapper>
+        <Hello name="react" color="blue" isSpecial={true} />
+        <Hello color="green" />
+      </Wrapper>
     </div>
   );
 

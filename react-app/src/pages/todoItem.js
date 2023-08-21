@@ -1,22 +1,20 @@
 import { useState } from "react";
 
-const Todolist = () => {
+function todoItem({todo}){
+  const [isActive, setIsActive] = useState(false);
   const [form, setValue] = useState({
     todocont : '',
   }); 
-  const submitTodo = (e) => {
+  const itemSave = (e) => {
     e.preventDefault();
-    //onSaveData(form)
-    setValue({ //초기화
-      todocont : '',
-    })
-
-    console.log(form)
+    //setIsActive(!isActive);
   }
 
   return (
-    <div>
-    </div>
+    <li>
+      <input type="text" />
+      <button className="btn S" ></button>
+    </li>
   );
 }
 
