@@ -1,5 +1,5 @@
 import boardInfo from "./../db/boardInfo.json";
-import PagePrev from "./../components/PagePrev"; 
+import AppHeader from './../components/AppHeader.js';
 import { useNavigate, useParams } from "react-router-dom";
 
 function BoardDetail(){
@@ -13,10 +13,7 @@ function BoardDetail(){
   })
   return (
     <div>
-      <header className="header">
-        <PagePrev />
-        <h1>게시판 상세</h1>
-      </header>
+      <AppHeader title="게시판 상세" /> 
       <div className="boardDetail">
         <dl>
           <dt>제목</dt>

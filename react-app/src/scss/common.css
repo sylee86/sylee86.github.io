@@ -50,7 +50,7 @@ body {
 }
 
 h1, h2, h3, h4, h5, h6 {
-  color: #222;
+  color: #fff;
   font-size: inherit;
   font-weight: 500;
 }
@@ -321,6 +321,19 @@ input[type=text], textarea {
   bottom: 0;
 }
 
+/*================================================== 여백 ==================================================*/
+.mt20 {
+  margin-top: 20px;
+}
+
+.pl0 {
+  padding-left: 0 !important;
+}
+
+.pr0 {
+  padding-right: 0 !important;
+}
+
 /*================================================== components ==================================================*/
 .btns {
   display: flex;
@@ -341,12 +354,13 @@ input[type=text], textarea {
   border-radius: 4px;
 }
 .btn:not(.btns).S {
-  padding: 10px 10px;
+  padding: 10px 2px;
   height: 30px;
 }
 .btn:not(.btns).L {
   width: calc(50% - 5px);
   height: 50px;
+  margin-bottom: 8px;
 }
 
 /* 게시판 리스트 */
@@ -468,4 +482,25 @@ input[type=text], textarea {
 }
 .todoList.insert .todoItem.active input {
   border: none;
+}
+
+.counter {
+  display: flex;
+  justify-content: center;
+}
+.counter strong {
+  min-width: 40px;
+  font-size: 18px;
+  text-align: center;
+  color: #fff;
+}
+.counter button {
+  margin: 0 2px;
+  width: 40px;
+  height: 30px;
+  text-align: center;
+  color: #fff;
+  background-color: transparent;
+  border: 1px solid #666;
+  border-radius: 2px;
 }

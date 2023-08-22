@@ -1,16 +1,11 @@
 import boardInfo from "./../db/boardInfo.json"  
+import AppHeader from './../components/AppHeader.js';
 import { Link } from "react-router-dom"; 
 
 const BoardList = () => {
   return (
     <div>
-      <header className="header">
-        <Link className="btn" to="/">
-          <i className="gg-home"></i>
-          <span className="blind">home</span>
-        </Link>
-        <h1>게시판 목록</h1>
-      </header>
+      <AppHeader title="게시판 목록" /> 
       <form className="boardList">
         <ul>
           {

@@ -1,4 +1,5 @@
 import { useState, useCallback } from 'react';
+import AppHeader from './../components/AppHeader.js';
 import { Link } from "react-router-dom"; 
 
 function TodoInsert(){
@@ -11,13 +12,7 @@ function TodoInsert(){
   
   return (
     <div>
-      <header className="header">
-        <Link className="btn" to="/">
-          <i className="gg-home"></i>
-          <span className="blind">home</span>
-        </Link>
-        <h1>To do List</h1>
-      </header>
+      <AppHeader title="To do List" /> 
       <form>
         <div className="todoInput">
           <input type="text" name="todoitem" onChange={inpValue} placeholder="해야할 일을 입력해주세요." />

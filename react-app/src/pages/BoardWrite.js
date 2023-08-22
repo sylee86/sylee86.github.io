@@ -1,5 +1,5 @@
-import PagePrev from "./../components/PagePrev" 
 import { useState } from "react";
+import AppHeader from './../components/AppHeader.js';
 import axios from "axios";
 
 function BoardWrite(){
@@ -40,10 +40,7 @@ function BoardWrite(){
 
   return (
     <div>
-      <header className="header">
-        <PagePrev />
-        <h1>게시판 작성</h1>
-      </header>
+      <AppHeader title="게시판 작성" /> 
       <form className="boardDetail" onSubmit={submitVal}>
         <dl>
           <dt>제목</dt>

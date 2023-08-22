@@ -2,6 +2,7 @@ import boardInfo from "./../db/boardInfo.json"
 import PagePrev from "./../components/PagePrev" 
 import { useParams } from "react-router-dom"; 
 import { useState } from "react";
+import AppHeader from './../components/AppHeader.js';
 
 function BoardEdit(){
   let para = useParams(); // url 파라미터
@@ -31,10 +32,7 @@ function BoardEdit(){
 
   return (
     <div>
-      <header className="header">
-        <PagePrev />
-        <h1>게시판 수정</h1>
-      </header>
+      <AppHeader title="게시판 수정" /> 
       <form className="boardDetail" onSubmit={submitVal}>
         <dl>
           <dt>제목</dt>

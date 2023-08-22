@@ -9,26 +9,25 @@ const Main = () => {
   let goTodolist = () => {
     navigate("/todolist");
   }
-  let goTodolist2 = () => {
-    navigate("/todolist2");
-  }
   let goHello = () => {
-    navigate("/hello");
+    navigate("/Wrapper");
   }
   let goCounter = () => {
     navigate("/Counter");
+  }
+  let goInputSample = () => {
+    navigate("/InputSample");
   }
   return (
     <div>
       <AppHeader title="react" /> 
       <div className="main">
-        <p>react 연습중입니다.</p><br />
         <div className="btns">
           <button type="button" className="btn L" onClick={() => goBoard()}>게시판 바로가기</button>
           <button type="button" className="btn L" onClick={() => goTodolist()}>todoList 바로가기</button>
-          <button type="button" className="btn L" onClick={() => goTodolist2()}>todoList2 바로가기</button>
-          <button type="button" className="btn L" onClick={() => goCounter()}>counter 바로가기</button>
-          <button type="button" className="btn L" onClick={() => goHello()}>hello</button>
+          <button type="button" className="btn L" onClick={() => goCounter()}>counter</button>
+          <button type="button" className="btn L" onClick={() => goHello()}>props</button>
+          <button type="button" className="btn L" onClick={() => goInputSample()}>input 상태관리</button>
         </div>
       </div>
     </div>

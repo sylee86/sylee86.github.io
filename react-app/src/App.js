@@ -5,9 +5,9 @@ import BoardList from './pages/BoardList.js';
 import BoardDetail from './pages/BoardDetail.js';
 import BoardEdit from './pages/BoardEdit.js';
 import BoardWrite from './pages/BoardWrite.js';
-import Hello from './pages/hello.js';
-import Wrapper from './pages/Wrapper.js';
 import Counter from './pages/Counter.js';
+import InputSample from './pages/InputSample.js';
+import Wrapper from './pages/Wrapper.js';
 import { Routes, Route, BrowserRouter } from "react-router-dom";
 
 
@@ -30,13 +30,12 @@ const App = () => {
           <Route path="/TodoTemplate" element={<TodoTemplate />} />
           {/* Counter */}
           <Route path="/Counter" element={<Counter />} />
-        </Routes>
+          {/* Wrapper */}
+          <Route path="/Wrapper" element={<Wrapper />} />
+          {/* InputSample */}
+          <Route path="/InputSample" element={<InputSample />} />
+      </Routes>
       </BrowserRouter>
-
-      <Wrapper>
-        <Hello name="react" color="blue" isSpecial={true} />
-        <Hello color="green" />
-      </Wrapper>
     </div>
   );
 
