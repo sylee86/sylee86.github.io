@@ -5,7 +5,8 @@ function ToggleItem({title, content, active}){
 
   const toggleSlide = (e) => {
     e.preventDefault();
-    setIsActive(!isActive);
+    setIsActive(!isActive); //true, false 반대로
+    //setIsActive(isActive => !isActive);
   }
   return (
     <div className={`toggleItem ${isActive ? "on" : ""}`}>
