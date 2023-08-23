@@ -5,9 +5,10 @@ import BoardList from './pages/BoardList.js';
 import BoardDetail from './pages/BoardDetail.js';
 import BoardEdit from './pages/BoardEdit.js';
 import BoardWrite from './pages/BoardWrite.js';
-import Counter from './pages/Counter.js';
 import InputSample from './pages/InputSample.js';
 import Wrapper from './pages/Wrapper.js';
+import Counter from './pages/Counter.js';
+import Toggle from './pages/Toggle.js';
 import { Routes, Route, BrowserRouter } from "react-router-dom";
 
 
@@ -34,6 +35,8 @@ const App = () => {
           <Route path="/Wrapper" element={<Wrapper />} />
           {/* InputSample */}
           <Route path="/InputSample" element={<InputSample />} />
+          {/* Toggle */}
+          <Route path="/Toggle" element={<Toggle />} />
       </Routes>
       </BrowserRouter>
     </div>

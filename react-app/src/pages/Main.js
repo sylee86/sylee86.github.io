@@ -18,6 +18,9 @@ const Main = () => {
   let goInputSample = () => {
     navigate("/InputSample");
   }
+  let goToggle = () => {
+    navigate("/Toggle");
+  }
   return (
     <div>
       <AppHeader title="react" /> 
@@ -28,6 +31,7 @@ const Main = () => {
           <button type="button" className="btn L" onClick={() => goCounter()}>counter</button>
           <button type="button" className="btn L" onClick={() => goHello()}>props</button>
           <button type="button" className="btn L" onClick={() => goInputSample()}>input 상태관리</button>
+          <button type="button" className="btn L" onClick={() => goToggle()}>toggle</button>
         </div>
       </div>
     </div>
