@@ -9,6 +9,7 @@ import InputSample from './pages/InputSample.js';
 import Wrapper from './pages/Wrapper.js';
 import Counter from './pages/Counter.js';
 import Toggle from './pages/Toggle.js';
+import Popup from './pages/Popup.js';
 import { Routes, Route, BrowserRouter } from "react-router-dom";
 
 
@@ -37,6 +38,8 @@ const App = () => {
           <Route path="/InputSample" element={<InputSample />} />
           {/* Toggle */}
           <Route path="/Toggle" element={<Toggle />} />
+          {/* popup */}
+          <Route path="/Popup" element={<Popup />} />
       </Routes>
       </BrowserRouter>
     </div>

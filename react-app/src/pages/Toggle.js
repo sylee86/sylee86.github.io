@@ -28,7 +28,7 @@ function Toggle(){
         };
       }
     });
-    setDatas(newDatas);
+    setDatas(newDatas); 
   }
   return (
     <div>

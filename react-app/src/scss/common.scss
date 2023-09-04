@@ -267,6 +267,44 @@ input[type="text"], textarea {width:100%; border: 1px solid #666;}
   }
 }
 
+/* Modal */
+.modal {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  width: 100%;
+  transform: translate(-50%, -50%);
+  z-index: 10;
+  opacity: 0;
+  display: none;
+
+  &.on {
+    display: block;
+    opacity: 1;
+    transition: opacity 0.5s 0s ease;
+  }
+  .mWrap {
+    position: relative;
+    margin: 20px;
+    padding: 10px;
+    min-height: 300px;
+    background-color: #fff;
+    border-radius: 4px;
+    color:#282c34;
+  }
+  .mHeader {
+    h1 {
+      color : #282c34;
+      font-weight: bold;
+    }
+    .mClose {
+      position: absolute;
+      top: 10px;
+      right: 10px;
+    }
+  }
+}
+
 /* 투두 리스트 */
 .todoInput {
   padding: 10px;
